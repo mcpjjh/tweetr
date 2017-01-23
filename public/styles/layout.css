@@ -14,10 +14,13 @@ html {
  * Global layout stuff
  */
 
-body {
-  margin: 0;
-  color: #244751;
-  background-color: #eee;
+.container {
+  margin: auto;
+  background-color: #ffffff;
+  margin-top: 110px;
+  width: 450px;
+  padding: 3% 1% 10% 1%;
+  /*margin: 0 2em;*/
 }
 
 /*
