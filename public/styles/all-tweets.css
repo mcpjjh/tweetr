@@ -1,66 +1,73 @@
-.container .all-tweets .tweetArticle {
-  margin: 5em 2em 0 2em;
+.container #tweets-container .tweet-article {
+  margin: 1em 1em 1em 1em;
   border: solid black 1px;
   border-radius: 5px;
-  padding: 5px 1em 30px 1em;
+  background-color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.container #tweets-container {
+  margin: 1em 1em 0 1em;
   background-color: #ffffff;
 }
 
-.all-tweets .tweet-article header {
-  display: block;
-  background: lightgrey;
-  /*border-bottom: solid black 1px;*/
-  margin: 0;
-  padding: 0;
-  padding-bottom: 30px;
-  width: 100%;
-  top: 0;
+#tweets-container .tweet-article header {
+  background: #eee;
+  padding-left: 10px;
+  border-radius: 5px;
   height: 70px;
+  display: flex;
 }
 
-.container .all-tweets .tweet-article header h2 {
-  float: left;
-  /*padding-left: 3em;*/
-  margin: 20px 0 10px 10px;
-  line-height: 30%;
-  height: 20px;
-  top: 0;
-  /*vertical-align: text-top;*/
-}
-
-.container .all-tweets .tweet-article header h4 {
-  padding-left: 18.25em;
-  /*top: 0;*/
-  margin: 0;
-  line-height: 310%
-}
-.container .all-tweets .tweet-article p {
-  padding-left: 10px;
-}
-
-
-.all-tweets .tweet-article footer {
-  border-top: solid darkgrey 0.5px;
-  height: 42px;
-  line-height: 0;
-  padding-left: 10px;
-}
-
-.container .all-tweets {
-  /*border: solid black 1px;*/
-  margin: 5em 2em 0 2em;
-  border: solid black 1px;
-  border-radius: 5px;
-  /*padding: 5px 1em 30px 1em;*/
-  background-color: #ffffff;
-}
-
-.container .all-tweets .tweet-article header .logo {
-  height: 50px;
-  width: 50px;
-  float: left;
-  margin-left: 10px;
+.container #tweets-container .tweet-article header img {
   margin-top: 10px;
   border-radius: 5px;
-  border: solid black 1px
+  flex: 0 0 auto;
+  height: 50px;
+  width: 50px;
 }
+
+.container #tweets-container .tweet-article header h2 {
+  margin: 10px 0 auto 10px;
+  flex: 1 1 auto;
+}
+
+.container #tweets-container .tweet-article header h4 {
+  padding-right: 15px;
+  margin: 18px 0 auto 70px;
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.container #tweets-container .tweet-article p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#tweets-container .tweet-article footer {
+  border-top: solid darkgrey 0.5px;
+  line-height: 0;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.container #tweets-container .tweet-article footer .timestamp {
+  flex: 1 1 auto;
+}
+
+.container #tweets-container .tweet-article footer .controls {
+  opacity: 0;
+  flex: 0 0 60px;
+  margin: 14px 0 auto 450px;
+  transition: opacity 300ms ease-in-out;
+}
+
+.container #tweets-container .tweet-article:hover footer .controls {
+  opacity: 1;
+  color: hotpink;
+}
+
+
+
+

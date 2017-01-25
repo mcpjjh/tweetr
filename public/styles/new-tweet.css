@@ -21,7 +21,7 @@
 
 .container .new-tweet form input {
   float: left;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .container .new-tweet form textarea {
