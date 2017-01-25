@@ -66,7 +66,7 @@
 //     "created_at": 1461113796368
 //   }
 // ];
-var data = {};
+// var data = {};
 
 function renderTweets(data) {
   data.forEach(function(tweetData) {
@@ -102,10 +102,16 @@ function createTweetElement(tweetData) {
 return html;
 }
 
-
-// $(function(){
-//   renderTweets(data)
-// }
+function loadTweets() {
+  $.ajax( {
+    url: '/tweets',
+    method: 'GET'
+  })
+  .then((tweets) => {
+    $('#tweets-container').empty();
+    renderTweets(tweets)
+  })
+};
 
 
 $(function() {
@@ -116,26 +122,31 @@ $(function() {
       data: $(this).serialize()
     })
     .then(function() {
-      let tweetObject = {
-        "user": {
-          "name": "Johann von Goethe",
-          "avatars": {
-            "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
-            "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
-            "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
-          },
-          "handle": "@johann49"
-        },
-        "content": {
-          "text": $('textarea').val()
-        },
-        "created_at": 1461113796368
-      }
-      renderTweets([tweetObject])
+      loadTweets()
+    })
+    .fail((error) => {
+      console.error(error)
     })
   })
-  // .fail((error) => console.error(error))
+  loadTweets()
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
