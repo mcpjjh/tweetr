@@ -70,5 +70,10 @@ $(function() {
     }
   })
   loadTweets()
+  $('#nav-bar button').on("click", function() {
+    $('.new-tweet').slideToggle('300');
+    $('.new-tweet textarea').focus()
+  });
 });
+
 

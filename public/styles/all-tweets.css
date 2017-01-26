@@ -4,15 +4,16 @@
   border-radius: 5px;
   background-color: #ffffff;
   margin-bottom: 15px;
+  opacity: 0.7;
 }
 
 .container #tweets-container {
-  opacity: 0.7;
+  /*opacity: 0.7;*/
   margin: 1em 1em 0 1em;
   background-color: #ffffff;
 }
 
-.container #tweets-container:hover {
+.container #tweets-container .tweet-article:hover {
   opacity: 1;
 }
 
