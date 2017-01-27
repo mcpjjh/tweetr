@@ -8,7 +8,6 @@
 }
 
 .container #tweets-container {
-  /*opacity: 0.7;*/
   margin: 1em 1em 0 1em;
   background-color: #ffffff;
 }
@@ -64,7 +63,7 @@
 
 .container #tweets-container .tweet-article footer .controls {
   opacity: 0;
-  flex: 0 0 60px;
+  flex: 0 0 auto;
   transition: opacity 300ms ease-in-out;
 }
 
@@ -74,5 +73,76 @@
 }
 
 
+@media (max-width: 750px) {
+  .container #tweets-container {
+    margin-left: 15px;
+  }
+  .container #tweets-container .tweet-article header img {
+    height: 60px;
+    width: 60px;
+    margin-top: 5px;
+  }
+  #tweets-container .tweet-article header h2 {
+    font-size: xx-large;
+  }
+  #tweets-container .tweet-article header h4 {
+    font-size: x-large;
+  }
+  .container #tweets-container .tweet-article {
+    font-size: x-large;
+  }
+  #tweets-container .tweet-article footer .timestamp {
+    font-size: x-large;
+  }
+}
 
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 600px)
+  and (-webkit-min-device-pixel-ratio:2) {
+    .container #tweets-container {
+      margin-left: 15px;
+      margin-top: 50px;
+    }
+    .container #tweets-container header {
+      height: 180px;
+
+    }
+    .container #tweets-container .tweet-article header img {
+      height: 120px;
+      width: 120px;
+      margin-top: 30px;
+      margin-left: 20px;
+      border-radius: 10px;
+    }
+    #tweets-container .tweet-article header h2 {
+      font-size: 230%;
+      padding-top: 30px;
+      padding-left: 20px;
+    }
+    #tweets-container .tweet-article header h4 {
+      font-size: 170%;
+      margin-right: 20px;
+    }
+    .container #tweets-container .tweet-article {
+      font-size: x-large;
+      height: 500px;
+      border-radius: 20px;
+      margin-bottom: 35px;
+      opacity: 1;
+    }
+    #tweets-container .tweet-article footer .timestamp {
+      font-size: 190%;
+      margin-left: 20px;
+    }
+    .container #tweets-container .tweet-article p {
+      font-size: 250%;
+      margin-left: 20px;
+    }
+    .container #tweets-container .tweet-article footer .controls {
+      margin-right: 20px;
+      font-size: 190%;
+      opacity: 1;
+    }
+}
 

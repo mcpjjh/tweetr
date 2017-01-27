@@ -1,17 +1,19 @@
-
 .container .new-tweet {
   display: none;
-  margin: 0 2em;
+  margin: 20px 2em 0 2em;
   border: solid black 1px;
   border-radius: 5px;
   padding: 0 1em 30px 1em;
   background-color: #eee;
+  margin-bottom: 50px;
+  width: auto;
 }
 
 .container .new-tweet h2 {
   border-bottom: solid black 1px;
-  padding: auto 0;
-  margin-top: 10px;
+  padding: 2px 2px 3px 2px;
+  margin-top: 7px;
+  margin-bottom: 15px;
 }
 
 .container .new-tweet form span {
@@ -22,7 +24,7 @@
 
 .container .new-tweet form input {
   float: left;
-  margin-bottom: 5px;
+  margin-top: 1px;
 }
 
 .container .new-tweet form textarea {
@@ -34,4 +36,62 @@ body {
   color: #244751;
   background-color: #eee;
   font-family: 'Roboto Condensed', sans-serif;
+}
+
+@media (max-width: 750px) {
+  .container .new-tweet {
+    width: auto;
+    margin: 25px 2.5em 0 2.5em;
+  }
+  .container .new-tweet h2 {
+    font-size: xx-large;
+  }
+  .container .new-tweet form span {
+    font-size: x-large;
+  }
+  .container .new-tweet form input[type=submit] {
+    font-size: large;
+    z-index:6;
+  }
+  .container .new-tweet form textarea {
+    font-size: x-large;
+  }
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 600px)
+  and (-webkit-min-device-pixel-ratio:2) {
+    .container .new-tweet {
+      width: auto;
+      margin: 25px 2.5em 0 2.5em;
+      height: 500px;
+      border-radius: 20px;
+    }
+    .container .new-tweet h2 {
+      font-size: 400%;
+      margin-top: 20px;
+      margin-left: 20px;
+      margin-bottom: 25px;
+      margin-right: 20px;
+    }
+    .container .new-tweet form span {
+      font-size: 300%;
+      margin-right: 20px;
+      margin-top: 20px;
+    }
+    .container .new-tweet form input {
+      font-size: 300%;
+      padding: 0;
+      margin-left: 20px;
+      margin-top: 13px;
+    }
+    .container .new-tweet form textarea {
+      font-size: 350%;
+      margin-left: 20px;
+      margin-right: 20px;
+      /*padding-right: 20px;*/
+      height: 250px;
+      width: 820px;
+    }
 }

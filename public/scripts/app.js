@@ -11,22 +11,28 @@ function renderTweets(data) {
   })
 }
 
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 function createTweetElement(tweetData) {
   let name = tweetData.user.name
   let avatar = tweetData.user.avatars.small
   let handle = tweetData.user.handle
   let content = tweetData.content.text
-  let created_at = tweetData.created_at
+  let created_at = $.timeago(tweetData.created_at)
   let html = `<article class="tweet-article">
                 <header>
-                  <img src=${avatar}>
-                  <h2>${name}</h2>
-                  <h4>${handle}</h4>
+                  <img src="${escape(avatar)}">
+                  <h2>${escape(name)}</h2>
+                  <h4>${escape(handle)}</h4>
                 </header>
-                <p>${content}</p>
+                <p>${escape(content)}</p>
                 <footer>
                  <div class="timestamp">
-                   <h5>${created_at}</h5>
+                   <h5>${escape(created_at)}</h5>
                  </div>
                   <div class="controls">
                     <i class="fa fa-flag" aria-hidden="true"></i>
@@ -61,8 +67,10 @@ $(function() {
         method: 'POST',
         data: $(this).serialize()
       })
-      .then(function() {
-        loadTweets()
+      .done(function() {
+        $('#textInput').val('');
+        $('.counter').text(140);
+        loadTweets();
       })
       .fail((error) => {
         console.error(error)

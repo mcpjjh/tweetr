@@ -5,7 +5,7 @@
   height: 80px;
   width: 100%;
   color: #e8fdff;
-  padding: 0 2em;
+  padding: 0 1em;
   top: 0;
   display: flex;
 }
@@ -17,10 +17,10 @@
 }
 
 #nav-bar .header {
-  font-size: 200%;
+  font-size: xx-large;
   flex: 0 0 auto;
   line-height: 245%;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 #nav-bar button {
@@ -44,4 +44,51 @@
   width: 150px;
   background-color: #ffffff;
   color: black;
+}
+
+@media (max-width: 750px) {
+  #nav-bar {
+    background-color: #DEBCEA;
+  }
+  #nav-bar .logo {
+    height: 60px;
+    width: 60px;
+    margin-top: 13px;
+  }
+  #nav-bar .header {
+    margin-left: 10px;
+    font-size: xx-large;
+    line-height: 250%;
+  }
+    #nav-bar button {
+    font-size: x-large;
+  }
+}
+
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 600px)
+  and (-webkit-min-device-pixel-ratio:2) {
+    #nav-bar {
+      height: 180px;
+    }
+    #nav-bar button {
+      font-size: 280%;
+      height: 120px;
+      width: 340px;
+      margin-top: 30px;
+      margin-right: 29px;
+    }
+    #nav-bar .logo {
+      margin-top: 20px;
+      margin-left: 20px;
+      height: 150px;
+      width: 150px;
+    }
+    #nav-bar .header {
+      margin-left: 30px;
+      font-size: 480%;
+      line-height: 230%;
+    }
 }

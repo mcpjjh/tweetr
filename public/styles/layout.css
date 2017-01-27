@@ -17,14 +17,31 @@ html {
 .container {
   margin: auto;
   background-color: #ffffff;
-  margin-top: 70px;
+  margin-top: 60px;
   width: 75%;
-  padding: 5% 1% 5% 1%;
-  /*margin: 0 2em;*/
+  padding: 20px 5px;
+}
+
+@media (max-width: 750px) {
+  .container {
+    width: 100%;
+  }
 }
 
 
+@media (min-width: 1000px) {
+  .container {
+    width: 750px;
+  }
+}
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 800px)
+  and (-webkit-min-device-pixel-ratio:2) {
+    .container {
+      width: 100%;
+      margin-top: 170px;
+    }
+}
