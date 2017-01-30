@@ -1,21 +1,17 @@
-.container #tweets-container .tweet-article {
-  margin: 1em 1em 1em 1em;
-  border: solid black 1px;
-  border-radius: 5px;
-  background-color: #ffffff;
-  margin-bottom: 15px;
-  opacity: 0.7;
-}
-
 .container #tweets-container {
   margin: 1em 1em 0 1em;
   background-color: #ffffff;
 }
-
+.container #tweets-container .tweet-article {
+  margin: 1em 1em 15px 1em;
+  border: solid black 1px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  opacity: 0.7;
+}
 .container #tweets-container .tweet-article:hover {
   opacity: 1;
 }
-
 #tweets-container .tweet-article header {
   background: #eee;
   padding-left: 10px;
@@ -24,7 +20,6 @@
   height: 70px;
   display: flex;
 }
-
 .container #tweets-container .tweet-article header img {
   margin-top: 10px;
   border-radius: 5px;
@@ -32,22 +27,18 @@
   height: 50px;
   width: 50px;
 }
-
 .container #tweets-container .tweet-article header h2 {
   margin: 10px 0 auto 10px;
   flex: 1 1 auto;
 }
-
 .container #tweets-container .tweet-article header h4 {
   flex: 0 0 auto;
   text-align: right;
 }
-
 .container #tweets-container .tweet-article p {
   padding-left: 10px;
   padding-right: 10px;
 }
-
 #tweets-container .tweet-article footer {
   border-top: solid darkgrey 0.5px;
   line-height: 0;
@@ -56,26 +47,25 @@
   display: flex;
   align-items: center;
 }
-
 .container #tweets-container .tweet-article footer .timestamp {
   flex: 1 1 auto;
 }
-
 .container #tweets-container .tweet-article footer .controls {
   opacity: 0;
   flex: 0 0 auto;
   transition: opacity 300ms ease-in-out;
 }
-
 .container #tweets-container .tweet-article:hover footer .controls {
   opacity: 1;
-  color: hotpink;
+  color: #00a087;
 }
 
-
-@media (max-width: 750px) {
+@media (max-width: 680px) {
   .container #tweets-container {
     margin-left: 15px;
+  }
+  .container #tweets-container .tweet-article {
+    font-size: x-large;
   }
   .container #tweets-container .tweet-article header img {
     height: 60px;
@@ -88,8 +78,22 @@
   #tweets-container .tweet-article header h4 {
     font-size: x-large;
   }
-  .container #tweets-container .tweet-article {
+  #tweets-container .tweet-article footer .timestamp {
     font-size: x-large;
+  }
+}
+
+@media (max-width: 550px) {
+  .container #tweets-container .tweet-article header img {
+    height: 50px;
+    width: 50px;
+    margin-top: 8px;
+  }
+  #tweets-container .tweet-article header h2 {
+    font-size: x-large;
+  }
+  #tweets-container .tweet-article header h4 {
+    font-size: large;
   }
   #tweets-container .tweet-article footer .timestamp {
     font-size: x-large;
@@ -98,15 +102,21 @@
 
 @media only screen
   and (min-device-width: 320px)
-  and (max-device-width: 600px)
+  and (max-device-width: 1100px)
   and (-webkit-min-device-pixel-ratio:2) {
     .container #tweets-container {
       margin-left: 15px;
       margin-top: 50px;
     }
+    .container #tweets-container .tweet-article {
+      font-size: x-large;
+      height: 500px;
+      border-radius: 20px;
+      margin-bottom: 35px;
+      opacity: 1;
+    }
     .container #tweets-container header {
       height: 180px;
-
     }
     .container #tweets-container .tweet-article header img {
       height: 120px;
@@ -124,19 +134,12 @@
       font-size: 170%;
       margin-right: 20px;
     }
-    .container #tweets-container .tweet-article {
-      font-size: x-large;
-      height: 500px;
-      border-radius: 20px;
-      margin-bottom: 35px;
-      opacity: 1;
+    .container #tweets-container .tweet-article p {
+      font-size: 250%;
+      margin-left: 20px;
     }
     #tweets-container .tweet-article footer .timestamp {
       font-size: 190%;
-      margin-left: 20px;
-    }
-    .container #tweets-container .tweet-article p {
-      font-size: 250%;
       margin-left: 20px;
     }
     .container #tweets-container .tweet-article footer .controls {

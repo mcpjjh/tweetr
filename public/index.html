@@ -24,14 +24,18 @@
   </head>
 
   <body>
-
-    <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
-      <button type="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbspCompose</button>
+        <button class="compose2" type="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+        <button class="register2" type="button"><i class="fa fa-user-plus" aria-hidden="true"></i></button>
+        <button class="login2" type="button"><i class="fa fa-sign-in" aria-hidden="true"></i></button>
+        <button class="logout2" type="button"><i class="fa fa-sign-out" aria-hidden="true"></i></button>
+        <button class="compose" type="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbspCompose</button>
+        <button class="register" type="button"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbspRegister</button>
+        <button class="login" type="button"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbspLog In</button>
+        <button class="logout" type="button"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbspLog Out</button>
     </nav>
-
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
@@ -41,11 +45,8 @@
           <span class="counter">140</span>
         </form>
       </section>
-
       <section id ="tweets-container">
       </section>
-
     </main>
-
   </body>
 </html>

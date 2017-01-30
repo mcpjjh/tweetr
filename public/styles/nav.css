@@ -9,47 +9,117 @@
   top: 0;
   display: flex;
 }
-
 #nav-bar .logo {
   height: 80px;
   width: 80px;
   flex: 0 0 auto;
 }
-
 #nav-bar .header {
   font-size: xx-large;
-  flex: 0 0 auto;
+  flex: 1 1 auto;
   line-height: 245%;
   margin-left: 20px;
 }
-
-#nav-bar button {
+#nav-bar .compose {
   opacity: 0.8;
-  margin-left: auto;
-  margin-top: 10px;
+  margin-top: 15px;
   border-radius: 5px;
-  height: 60px;
-  width: 150px;
+  height: 50px;
+  width: 140px;
+  background-color: #ffffff;
+  color: #00a087;
+  font-size: 130%;
+}
+#nav-bar .register {
+  opacity: 0.8;
+  margin-left: 5px;
+  margin-top: 15px;
+  border-radius: 5px;
+  height: 50px;
+  width: 140px;
   background-color: #ffffff;
   color: #00a087;
   flex: 0 0 auto;
+  font-size: 130%;
 }
-
-#nav-bar button:hover {
-  opacity: 1;
-  margin-top: 10px;
+#nav-bar .login {
+  opacity: 0.8;
+  margin-left: 5px;
+  margin-top: 15px;
   border-radius: 5px;
-  flex: 0 0 auto;
-  height: 60px;
-  width: 150px;
+  height: 50px;
+  width: 140px;
   background-color: #ffffff;
+  color: #00a087;
+  flex: 0 0 auto;
+  font-size: 130%;
+}
+#nav-bar .logout {
+  opacity: 0.8;
+  margin-left: 5px;
+  margin-top: 15px;
+  border-radius: 5px;
+  height: 50px;
+  width: 140px;
+  background-color: #ffffff;
+  color: #00a087;
+  flex: 0 0 auto;
+  font-size: 130%;
+}
+#nav-bar .compose:hover {
+  opacity: 1;
+  color: black;
+}
+#nav-bar .register:hover {
+  opacity: 1;
+  color: black;
+}
+#nav-bar .login:hover {
+  opacity: 1;
+  color: black;
+}
+#nav-bar .logout:hover {
+  opacity: 1;
+  color: black;
+}
+#nav-bar .compose2 {
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+#nav-bar .register2 {
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+#nav-bar .login2 {
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+#nav-bar .logout2 {
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+#nav-bar .compose2:hover {
+  opacity: 1;
+  color: black;
+}
+#nav-bar .register2:hover {
+  opacity: 1;
+  color: black;
+}
+#nav-bar .login2:hover {
+  opacity: 1;
+  color: black;
+}
+#nav-bar .logout2:hover {
+  opacity: 1;
   color: black;
 }
 
-@media (max-width: 750px) {
-  #nav-bar {
-    background-color: #DEBCEA;
-  }
+@media (max-width: 860px) {
   #nav-bar .logo {
     height: 60px;
     width: 60px;
@@ -60,35 +130,189 @@
     font-size: xx-large;
     line-height: 250%;
   }
-    #nav-bar button {
-    font-size: x-large;
+  #nav-bar .compose {
+  height: 50px;
+  width: 100px;
+  font-size: medium;
+  }
+  #nav-bar .register {
+  height: 50px;
+  width: 100px;
+  font-size: medium;
+  }
+  #nav-bar .login {
+  height: 50px;
+  width: 100px;
+  font-size: medium;
+  }
+  #nav-bar .logout {
+  height: 50px;
+  width: 100px;
+  font-size: medium;
+  }
+  #nav-bar .compose:hover {
+  height: 50px;
+  width: 100px;
+  font-size: medium;
+  }
+  #nav-bar .register:hover {
+  height: 50px;
+  width: 100px;
+  font-size: medium;
+  }
+  #nav-bar .login:hover {
+  height: 50px;
+  width: 100px;
+  font-size: medium;
+  }
+  #nav-bar .logout:hover {
+  height: 50px;
+  width: 100px;
+  font-size: medium;
   }
 }
 
+@media (max-width: 680px) {
+  #nav-bar .logo {
+    height: 60px;
+    width: 60px;
+    margin-top: 13px;
+  }
+  #nav-bar .header {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 180%;
+    line-height: 300%;
+  }
+  #nav-bar .compose {
+  display: none;
+  }
+  #nav-bar .register {
+  display: none;
+  }
+  #nav-bar .login {
+  display: none;
+  }
+  #nav-bar .logout {
+  display: none;
+  }
+  #nav-bar .compose2 {
+  opacity: 0.8;
+  margin-top: 15px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #00a087;
+  height: 50px;
+  width: 60px;
+  font-size: x-large;
+  }
+  #nav-bar .register2 {
+  opacity: 0.8;
+  margin-top: 15px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #00a087;
+  height: 50px;
+  width: 60px;
+  font-size: x-large;
+  }
+  #nav-bar .login2 {
+  opacity: 0.8;
+  margin-top: 15px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #00a087;
+  height: 50px;
+  width: 60px;
+  font-size: x-large;
+  }
+  #nav-bar .logout2 {
+  opacity: 0.8;
+  margin-top: 15px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #00a087;
+  height: 50px;
+  width: 60px;
+  font-size: x-large;
+  }
+  #nav-bar .compose2:hover {
+  opacity: 1;
+  height: 50px;
+  width: 60px;
+  font-size: x-large;
+  }
+  #nav-bar .register2:hover {
+  opacity: 1;
+  height: 50px;
+  width: 60px;
+  font-size: x-large;
+  }
+  #nav-bar .login2:hover {
+  opacity: 1;
+  height: 50px;
+  width: 60px;
+  font-size: x-large;
+  }
+  #nav-bar .logout2:hover {
+  opacity: 1;
+  height: 50px;
+  width: 60px;
+  font-size: x-large;
+  }
+}
 
 @media only screen
   and (min-device-width: 320px)
-  and (max-device-width: 600px)
+  and (max-device-width: 1100px)
   and (-webkit-min-device-pixel-ratio:2) {
     #nav-bar {
-      height: 180px;
-    }
-    #nav-bar button {
-      font-size: 280%;
-      height: 120px;
-      width: 340px;
-      margin-top: 30px;
-      margin-right: 29px;
+      height: 170px;
     }
     #nav-bar .logo {
-      margin-top: 20px;
-      margin-left: 20px;
-      height: 150px;
-      width: 150px;
+      margin-top: 30px;
+      margin-left: 10px;
+      height: 120px;
+      width: 120px;
     }
     #nav-bar .header {
-      margin-left: 30px;
-      font-size: 480%;
-      line-height: 230%;
+      margin-left: 20px;
+      font-size: 450%;
+      line-height: 250%;
+    }
+    #nav-bar .compose {
+      margin-top: 35px;
+      border-radius: 5px;
+      height: 100px;
+      width: 130px;
+      font-size: 180%
+    }
+    #nav-bar .register {
+      margin-left: 5px;
+      margin-top: 35px;
+      border-radius: 5px;
+      height: 100px;
+      width: 120px;
+      flex: 0 0 auto;
+      font-size: 180%
+    }
+    #nav-bar .login {
+      opacity: 0.8;
+      margin-left: 5px;
+      margin-top: 35px;
+      border-radius: 5px;
+      height: 100px;
+      width: 120px;
+      font-size: 180%
+    }
+    #nav-bar .logout {
+      opacity: 0.8;
+      margin-left: 5px;
+      margin-top: 35px;
+      margin-right: 10px;
+      border-radius: 5px;
+      height: 100px;
+      width: 120px;
+      font-size: 180%
     }
 }

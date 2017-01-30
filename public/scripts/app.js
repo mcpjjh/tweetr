@@ -58,7 +58,7 @@ function loadTweets() {
 $(function() {
     $('form').on('submit', function(event) {
       event.preventDefault();
-      if (document.getElementById("textInput").value == "") {
+      if (document.getElementById("textInput").value == "" || document.getElementById("textInput").value == " " ) {
         alert("You have nothing entered!");
       } else if (document.getElementById("textInput").value.length > 140) {
         alert("You have exceeded the character limit!");
@@ -78,10 +78,15 @@ $(function() {
     }
   })
   loadTweets()
-  $('#nav-bar button').on("click", function() {
+  $('#nav-bar .compose').on("click", function() {
     $('.new-tweet').slideToggle('300');
     $('.new-tweet textarea').focus()
-  });
+  })
+  loadTweets()
+  $('#nav-bar .compose2').on("click", function() {
+    $('.new-tweet').slideToggle('300');
+    $('.new-tweet textarea').focus()
+  })
 });
 
 
