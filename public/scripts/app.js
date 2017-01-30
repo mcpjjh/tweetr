@@ -58,7 +58,7 @@ function loadTweets() {
 $(function() {
     $('form').on('submit', function(event) {
       event.preventDefault();
-      if (document.getElementById("textInput").value == "" || document.getElementById("textInput").value == " " ) {
+      if (document.getElementById("textInput").value == "" || document.getElementById("textInput").value == " ") {
         alert("You have nothing entered!");
       } else if (document.getElementById("textInput").value.length > 140) {
         alert("You have exceeded the character limit!");
