@@ -15,7 +15,7 @@ html {
   background-color: #ffffff;
   margin-top: 60px;
   width: 75%;
-  padding: 20px 5px;
+  padding: 10px 5px;
 }
 
 @media (max-width: 680px) {
@@ -31,11 +31,11 @@ html {
 }
 
 @media only screen
-  and (min-device-width: 320px)
+  and (min-device-width: 300px)
   and (max-device-width: 1100px)
   and (-webkit-min-device-pixel-ratio:2) {
     .container {
       width: 100%;
-      margin-top: 170px;
+      margin-top: 100px;
     }
 }

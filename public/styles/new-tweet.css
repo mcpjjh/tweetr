@@ -53,38 +53,28 @@ body {
 }
 
 @media only screen
-  and (min-device-width: 320px)
+  and (min-device-width: 300px)
   and (max-device-width: 1100px)
   and (-webkit-min-device-pixel-ratio:2) {
     .container .new-tweet {
       width: auto;
-      margin: 25px 2.5em 0 2.5em;
-      height: 500px;
-      border-radius: 20px;
+      margin: 25px 1.5em 0 1.5em;
+      border-radius: 10px;
     }
     .container .new-tweet h2 {
-      font-size: 400%;
-      margin-top: 20px;
-      margin-left: 20px;
-      margin-bottom: 25px;
-      margin-right: 20px;
+      font-size: 150%;
+      margin: 10px 1px 15px 1px;
     }
     .container .new-tweet form textarea {
-      font-size: 350%;
-      margin-left: 20px;
-      margin-right: 20px;
-      height: 250px;
-      width: 820px;
+      font-size: 100%;
     }
     .container .new-tweet form input {
-      font-size: 300%;
+      font-size: 100%;
       padding: 0;
-      margin-left: 20px;
-      margin-top: 13px;
+      margin-top: 1px;
     }
     .container .new-tweet form span {
-      font-size: 300%;
-      margin-right: 20px;
-      margin-top: 20px;
+      font-size: 100%;
+      margin-top: 5px;
     }
 }
