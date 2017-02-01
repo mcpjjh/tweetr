@@ -63,30 +63,36 @@ $(function() {
       } else if (document.getElementById("textInput").value.length > 140) {
         alert("You have exceeded the character limit!");
       } else {
-      $.ajax('/tweets', {
-        method: 'POST',
-        data: $(this).serialize()
-      })
-      .done(function() {
-        $('#textInput').val('');
-        $('.counter').text(140);
-        loadTweets();
-      })
-      .fail((error) => {
-        console.error(error)
-      })
-    }
+        $.ajax('/tweets', {
+          method: 'POST',
+          data: $(this).serialize()
+        })
+        .done(function(new_tweet) {
+          $('#textInput').val('');
+          $('.counter').text(140);
+          // NOTE: reminder about preprending only a single tweet
+          //       instead of reseting the entire tweets list
+          // loadTweets();
+          renderTweets([new_tweet]);
+        })
+        .fail((error) => {
+          console.error(error)
+        })
+      }
   })
+
   loadTweets()
   $('#nav-bar .compose').on("click", function() {
     $('.new-tweet').slideToggle('300');
     $('.new-tweet textarea').focus()
   })
-  loadTweets()
-  $('#nav-bar .compose2').on("click", function() {
-    $('.new-tweet').slideToggle('300');
-    $('.new-tweet textarea').focus()
-  })
+
+  // NOTE: no need to load tweets twice on page load, only once @ line #84 is good
+  // loadTweets()
+
+  // NOTE: to remove
+  // $('#nav-bar .compose2').on("click", function() {
+  //   $('.new-tweet').slideToggle('300');
+  //   $('.new-tweet textarea').focus()
+  // })
 });
-
-
